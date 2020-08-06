@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="sateva" default="all">
+  
+  
+  <property file="sateva.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.yarb/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.war"/>
+    <include name="*.swc"/>
+    <include name="*.zip"/>
+    <include name="*.egg"/>
+    <include name="*.ane"/>
+    <include name="*.jar"/>
+    <include name="*.ear"/>
+    <include name="*.klib"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.jdk1.8.0_211" value="${jdk.home.jdk1.8.0_211}/bin"/>
+  <path id="jdk.classpath.jdk1.8.0_211">
+    <fileset dir="${jdk.home.jdk1.8.0_211}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/deploy.jar"/>
+      <include name="jre/lib/ext/access-bridge-64.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jaccess.jar"/>
+      <include name="jre/lib/ext/jfxrt.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunmscapi.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+      <include name="jre/lib/javaws.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jfr.jar"/>
+      <include name="jre/lib/jfxswt.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/plugin.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.jdk1.8.0_211}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.jdk1.8.0_211}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.jdk1.8.0_211"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.lib.classpath">
+    <fileset dir="${basedir}/lib">
+      <patternset refid="library.patterns"/>
+    </fileset>
+  </path>
+  
+  <path id="library.sqlite-jdbc-3.30.1.classpath">
+    <pathelement location="${basedir}/lib/sqlite-jdbc-3.30.1.jar"/>
+  </path>
+  
+  <path id="library.sqlite-jdbc-3.30.11.classpath">
+    <pathelement location="${basedir}/lib/sqlite-jdbc-3.30.1.jar"/>
+  </path>
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <fileset dir="${javac2.home}">
+      <include name="javac2.jar"/>
+      <include name="jdom.jar"/>
+      <include name="asm-all*.jar"/>
+      <include name="forms-*.jar"/>
+    </fileset>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  
+  <!-- Module Aprendendo -->
+  
+  <dirname property="module.aprendendo.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.aprendendo" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.aprendendo" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.aprendendo" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.aprendendo" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="aprendendo.output.dir" value="${module.aprendendo.basedir}/out/production/Aprendendo"/>
+  <property name="aprendendo.testoutput.dir" value="${module.aprendendo.basedir}/out/test/Aprendendo"/>
+  
+  <path id="aprendendo.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="aprendendo.module.production.classpath">
+    <path refid="${module.jdk.classpath.aprendendo}"/>
+    <path refid="library.lib.classpath"/>
+    <path refid="library.sqlite-jdbc-3.30.1.classpath"/>
+  </path>
+  
+  <path id="aprendendo.runtime.production.module.classpath">
+    <pathelement location="${aprendendo.output.dir}"/>
+    <path refid="library.lib.classpath"/>
+    <path refid="library.sqlite-jdbc-3.30.1.classpath"/>
+  </path>
+  
+  <path id="aprendendo.module.classpath">
+    <path refid="${module.jdk.classpath.aprendendo}"/>
+    <pathelement location="${aprendendo.output.dir}"/>
+    <path refid="library.lib.classpath"/>
+    <path refid="library.sqlite-jdbc-3.30.1.classpath"/>
+  </path>
+  
+  <path id="aprendendo.runtime.module.classpath">
+    <pathelement location="${aprendendo.testoutput.dir}"/>
+    <pathelement location="${aprendendo.output.dir}"/>
+    <path refid="library.lib.classpath"/>
+    <path refid="library.sqlite-jdbc-3.30.1.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.aprendendo">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.aprendendo">
+    <patternset refid="excluded.from.module.aprendendo"/>
+  </patternset>
+  
+  <path id="aprendendo.module.sourcepath">
+    <dirset dir="${module.aprendendo.basedir}/Aprendendo">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.aprendendo" depends="compile.module.aprendendo.production,compile.module.aprendendo.tests" description="Compile module Aprendendo"/>
+  
+  <target name="compile.module.aprendendo.production" depends="register.custom.compilers" description="Compile module Aprendendo; production classes">
+    <mkdir dir="${aprendendo.output.dir}"/>
+    <javac2 destdir="${aprendendo.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.aprendendo}/javac">
+      <compilerarg line="${compiler.args.aprendendo}"/>
+      <bootclasspath refid="aprendendo.module.bootclasspath"/>
+      <classpath refid="aprendendo.module.production.classpath"/>
+      <src refid="aprendendo.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.aprendendo"/>
+    </javac2>
+    
+    <copy todir="${aprendendo.output.dir}">
+      <fileset dir="${module.aprendendo.basedir}/Aprendendo/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.aprendendo.tests" depends="register.custom.compilers,compile.module.aprendendo.production" description="compile module Aprendendo; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.aprendendo" description="cleanup module">
+    <delete dir="${aprendendo.output.dir}"/>
+    <delete dir="${aprendendo.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module Sateva -->
+  
+  <dirname property="module.sateva.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.sateva" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.sateva" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.sateva" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.sateva" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="sateva.output.dir" value="${module.sateva.basedir}/out/production/Sateva"/>
+  <property name="sateva.testoutput.dir" value="${module.sateva.basedir}/out/test/Sateva"/>
+  
+  <path id="sateva.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="sateva.module.production.classpath">
+    <path refid="${module.jdk.classpath.sateva}"/>
+    <path refid="library.lib.classpath"/>
+    <path refid="library.sqlite-jdbc-3.30.1.classpath"/>
+  </path>
+  
+  <path id="sateva.runtime.production.module.classpath">
+    <pathelement location="${sateva.output.dir}"/>
+    <path refid="library.lib.classpath"/>
+    <path refid="library.sqlite-jdbc-3.30.1.classpath"/>
+  </path>
+  
+  <path id="sateva.module.classpath">
+    <path refid="${module.jdk.classpath.sateva}"/>
+    <pathelement location="${sateva.output.dir}"/>
+    <path refid="library.lib.classpath"/>
+    <path refid="library.sqlite-jdbc-3.30.1.classpath"/>
+  </path>
+  
+  <path id="sateva.runtime.module.classpath">
+    <pathelement location="${sateva.testoutput.dir}"/>
+    <pathelement location="${sateva.output.dir}"/>
+    <path refid="library.lib.classpath"/>
+    <path refid="library.sqlite-jdbc-3.30.1.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.sateva">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.sateva">
+    <patternset refid="excluded.from.module.sateva"/>
+  </patternset>
+  
+  <path id="sateva.module.sourcepath">
+    <dirset dir="${module.sateva.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.sateva" depends="compile.module.sateva.production,compile.module.sateva.tests" description="Compile module Sateva"/>
+  
+  <target name="compile.module.sateva.production" depends="register.custom.compilers" description="Compile module Sateva; production classes">
+    <mkdir dir="${sateva.output.dir}"/>
+    <javac2 destdir="${sateva.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.sateva}/javac">
+      <compilerarg line="${compiler.args.sateva}"/>
+      <bootclasspath refid="sateva.module.bootclasspath"/>
+      <classpath refid="sateva.module.production.classpath"/>
+      <src refid="sateva.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.sateva"/>
+    </javac2>
+    
+    <copy todir="${sateva.output.dir}">
+      <fileset dir="${module.sateva.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.sateva.tests" depends="register.custom.compilers,compile.module.sateva.production" description="compile module Sateva; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.sateva" description="cleanup module">
+    <delete dir="${sateva.output.dir}"/>
+    <delete dir="${sateva.testoutput.dir}"/>
+  </target>
+  
+  
+  <!-- Module satevaFinance -->
+  
+  <dirname property="module.satevafinance.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.satevafinance" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.satevafinance" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.satevafinance" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.satevafinance" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="satevafinance.output.dir" value="${module.satevafinance.basedir}/out/production/satevaFinance"/>
+  <property name="satevafinance.testoutput.dir" value="${module.satevafinance.basedir}/out/test/satevaFinance"/>
+  
+  <path id="satevafinance.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="satevafinance.module.production.classpath">
+    <path refid="${module.jdk.classpath.satevafinance}"/>
+    <path refid="library.sqlite-jdbc-3.30.11.classpath"/>
+  </path>
+  
+  <path id="satevafinance.runtime.production.module.classpath">
+    <pathelement location="${satevafinance.output.dir}"/>
+    <path refid="library.sqlite-jdbc-3.30.11.classpath"/>
+  </path>
+  
+  <path id="satevafinance.module.classpath">
+    <path refid="${module.jdk.classpath.satevafinance}"/>
+    <pathelement location="${satevafinance.output.dir}"/>
+    <path refid="library.sqlite-jdbc-3.30.11.classpath"/>
+  </path>
+  
+  <path id="satevafinance.runtime.module.classpath">
+    <pathelement location="${satevafinance.testoutput.dir}"/>
+    <pathelement location="${satevafinance.output.dir}"/>
+    <path refid="library.sqlite-jdbc-3.30.11.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.satevafinance">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.satevafinance">
+    <patternset refid="excluded.from.module.satevafinance"/>
+  </patternset>
+  
+  <path id="satevafinance.module.sourcepath">
+    <dirset dir="${module.satevafinance.basedir}/satevaFinance">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.satevafinance" depends="compile.module.satevafinance.production,compile.module.satevafinance.tests" description="Compile module satevaFinance"/>
+  
+  <target name="compile.module.satevafinance.production" depends="register.custom.compilers" description="Compile module satevaFinance; production classes">
+    <mkdir dir="${satevafinance.output.dir}"/>
+    <javac2 destdir="${satevafinance.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.satevafinance}/javac">
+      <compilerarg line="${compiler.args.satevafinance}"/>
+      <bootclasspath refid="satevafinance.module.bootclasspath"/>
+      <classpath refid="satevafinance.module.production.classpath"/>
+      <src refid="satevafinance.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.satevafinance"/>
+    </javac2>
+    
+    <copy todir="${satevafinance.output.dir}">
+      <fileset dir="${module.satevafinance.basedir}/satevaFinance/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.satevafinance.tests" depends="register.custom.compilers,compile.module.satevafinance.production" description="compile module satevaFinance; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.satevafinance" description="cleanup module">
+    <delete dir="${satevafinance.output.dir}"/>
+    <delete dir="${satevafinance.testoutput.dir}"/>
+  </target>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.aprendendo, clean.module.sateva, clean.module.satevafinance" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.aprendendo, compile.module.sateva, compile.module.satevafinance" description="build all modules"/>
+  
+  <target name="all" depends="build.modules" description="build all"/>
+</project>

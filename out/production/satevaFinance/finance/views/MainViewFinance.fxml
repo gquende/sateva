@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finance.controllers.MainViewFinanceController">
+   <left>
+      <AnchorPane prefHeight="800.0" prefWidth="98.0" style="-fx-background-color: #2D325C;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutY="70.0" prefHeight="705.0" prefWidth="98.0">
+               <children>
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="103.0" styleClass="botaoMenu" stylesheets="@styles.css" text="Inicio" textAlignment="CENTER" textOverrun="CLIP">
+                     <graphic>
+                        <ImageView fitHeight="63.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icon/images2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="103.0" styleClass="botaoMenu" stylesheets="@styles.css" text="Investimentos" textAlignment="CENTER" textOverrun="CLIP">
+                     <graphic>
+                        <ImageView fitHeight="52.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icon/4-512.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="98.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="103.0" styleClass="botaoMenu" stylesheets="@styles.css" text="Orçamento" textAlignment="CENTER" textOverrun="CLIP">
+                     <graphic>
+                        <ImageView fitHeight="63.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icon/images2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="98.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="103.0" styleClass="botaoMenu" stylesheets="@styles.css" text="Receitas" textAlignment="CENTER" textOverrun="CLIP">
+                     <graphic>
+                        <ImageView fitHeight="63.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icon/258_Income_profit_revenue_Money-512.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="274.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="103.0" styleClass="botaoMenu" stylesheets="@styles.css" text="Despesas" textAlignment="CENTER" textOverrun="CLIP">
+                     <graphic>
+                        <ImageView fitHeight="56.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icon/69-512.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="362.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="103.0" styleClass="botaoMenu" stylesheets="@styles.css" text="Dividas" textAlignment="CENTER" textOverrun="CLIP">
+                     <graphic>
+                        <ImageView fitHeight="63.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icon/installments_portion-of-debts_part-payment_premium-512.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="186.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="103.0" styleClass="botaoMenu" stylesheets="@styles.css" text="Graficos" textAlignment="CENTER" textOverrun="CLIP">
+                     <graphic>
+                        <ImageView fitHeight="54.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icon/38888.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1D2141;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="66.0" layoutY="71.0" prefHeight="656.0" prefWidth="870.0" spacing="30.0">
+               <children>
+                  <HBox prefHeight="118.0" prefWidth="866.0" spacing="80.0">
+                     <children>
+                        <Pane fx:id="paneReceitas" prefHeight="110.0" prefWidth="235.0" style="-fx-background-color: #2D325C; -fx-background-radius: 15;">
+                           <children>
+                              <VBox prefHeight="110.0" prefWidth="239.0">
+                                 <children>
+                                    <Pane prefHeight="170.0" prefWidth="239.0">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutY="6.0" prefHeight="28.0" prefWidth="237.0" text="Total de Receitas" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font size="19.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Pane>
+                                    <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="239.0" styleClass="totalStyles" stylesheets="@styles.css">
+                                       <children>
+                                          <VBox layoutY="4.0" prefHeight="67.0" prefWidth="238.0">
+                                             <children>
+                                                <Label fx:id="labelReceitas" alignment="CENTER" contentDisplay="CENTER" prefHeight="0.0" prefWidth="238.0" text="0,00" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="labelPercentagemReceitas" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="0.0" prefWidth="238.0" text="0%" textAlignment="CENTER" textFill="#ff241c" textOverrun="CLIP" wrapText="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="48.0" prefHeight="0.0" prefWidth="238.0" text="vs. mês anterior" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="7.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Pane>
+                        <Pane fx:id="paneDespesas" layoutX="10.0" layoutY="10.0" prefHeight="110.0" prefWidth="235.0" style="-fx-background-color: #2D325C; -fx-background-radius: 15;">
+                           <children>
+                              <VBox prefHeight="110.0" prefWidth="239.0">
+                                 <children>
+                                    <Pane prefHeight="170.0" prefWidth="239.0">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutY="6.0" prefHeight="28.0" prefWidth="237.0" text="Total de Despesas" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font size="19.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="239.0" styleClass="totalStyles" stylesheets="@styles.css">
+                                       <children>
+                                          <VBox layoutY="4.0" prefHeight="67.0" prefWidth="238.0">
+                                             <children>
+                                                <Label fx:id="labelDespesas" alignment="CENTER" contentDisplay="CENTER" prefHeight="0.0" prefWidth="238.0" text="0,00" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="labelPercentagemDespesas" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="0.0" prefWidth="238.0" text="0%" textAlignment="CENTER" textFill="#2dcf09" textOverrun="CLIP" wrapText="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="48.0" prefHeight="0.0" prefWidth="238.0" text="vs. mês anterior" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="7.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Pane>
+                        <Pane fx:id="paneDividas" layoutX="245.0" layoutY="10.0" prefHeight="110.0" prefWidth="235.0" style="-fx-background-color: #2D325C; -fx-background-radius: 15;">
+                           <children>
+                              <VBox prefHeight="110.0" prefWidth="239.0">
+                                 <children>
+                                    <Pane prefHeight="170.0" prefWidth="239.0">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutY="6.0" prefHeight="28.0" prefWidth="237.0" text="Total de Dividas" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font size="19.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="239.0" styleClass="totalStyles" stylesheets="@styles.css">
+                                       <children>
+                                          <VBox layoutY="4.0" prefHeight="67.0" prefWidth="238.0">
+                                             <children>
+                                                <Label fx:id="labelDividas" alignment="CENTER" contentDisplay="CENTER" prefHeight="0.0" prefWidth="238.0" text="0,00" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="24.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="labelPercentagemDividas" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="0.0" prefWidth="238.0" text="0%" textAlignment="CENTER" textFill="#2dcf09" textOverrun="CLIP" wrapText="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="48.0" prefHeight="0.0" prefWidth="238.0" text="vs. mês anterior" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true">
+                                                   <font>
+                                                      <Font name="System Bold" size="7.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <Pane prefHeight="278.0" prefWidth="870.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <LineChart fx:id="graficoLinear" layoutX="-22.0" layoutY="-2.0" prefHeight="288.0" prefWidth="888.0" stylesheets="@styles.css">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" fx:id="x" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="y" side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                     </children>
+                  </Pane>
+                  <HBox prefHeight="232.0" prefWidth="870.0" spacing="185.0">
+                     <children>
+                        <Pane fx:id="graphicPane" prefHeight="232.0" prefWidth="342.0" style="-fx-background-color: #2D325C; -fx-background-radius: 20; -fx-border-radius: 20;" />
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="232.0" prefWidth="342.0" style="-fx-background-color: #2D325C; -fx-background-radius: 20; -fx-border-radius: 20;">
+                           <children>
+                              <VBox alignment="CENTER" layoutY="1.0" prefHeight="223.0" prefWidth="346.0">
+                                 <children>
+                                    <Label fx:id="labelMetaPoupanca" alignment="CENTER" contentDisplay="CENTER" prefHeight="138.0" prefWidth="284.0" text="0,00/0,00" textAlignment="CENTER" textFill="#ff509a" wrapText="true">
+                                       <font>
+                                          <Font name="System Bold" size="39.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="49.0" prefWidth="158.0" text="Meta Poupanca" textAlignment="CENTER" textFill="#ff529d" textOverrun="CLIP" wrapText="true">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="10.0" layoutY="128.0" prefHeight="45.0" prefWidth="158.0" text="0%" textAlignment="CENTER" textFill="#00ff44" wrapText="true">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="800.0" prefWidth="297.0" style="-fx-background-color: #2D325C;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="32.0" layoutY="180.0" prefHeight="238.0" prefWidth="266.0" style="-fx-background-color: #1D2141;" styleClass="personal" stylesheets="@styles.css">
+               <children>
+                  <VBox layoutX="11.0" layoutY="5.0" prefHeight="267.0" prefWidth="250.0" styleClass="personal" stylesheets="@styles.css">
+                     <children>
+                        <AnchorPane prefHeight="116.0" prefWidth="250.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="133.0" prefWidth="250.0" spacing="10.0">
+                                 <children>
+                                    <Circle fx:id="perfilFoto" fill="DODGERBLUE" radius="42.0" stroke="BLACK" strokeType="INSIDE" />
+                                    <Label fx:id="user" text="Adolfo Quende" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="116.0" prefWidth="250.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="102.0" prefWidth="250.0" style="-fx-border-width: 3 0 0 0; -fx-border-color: #2D325C;">
+                                 <children>
+                                    <Label text="Saldo" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="labelPatrimonio" alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="59.0" prefHeight="64.0" prefWidth="252.0" text="0,00" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                                       <font>
+                                          <Font size="34.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <Button fx:id="addItem" layoutX="116.0" layoutY="649.0" mnemonicParsing="false" onAction="#add" style="-fx-background-color: transparent;" stylesheets="@styles.css">
+               <graphic>
+                  <ImageView fitHeight="81.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/ic_add_circle_black_48dp.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Pane layoutX="109.0" layoutY="499.0" prefHeight="109.0" prefWidth="110.0" style="-fx-background-color: #FF509A; -fx-background-radius: 100000;" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

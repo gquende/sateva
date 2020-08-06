@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" styleClass="primaryColor" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finance.controllers.DividasDoMesController">
+   <children>
+      <ScrollPane layoutY="67.0" prefHeight="333.0" prefWidth="600.0" style="-fx-background-color: #2D325C;" styleClass="primaryColor" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="67.0">
+         <content>
+            <TableView fx:id="tableView" prefHeight="331.0" prefWidth="797.0" style="-fx-background-color: #2D325C;">
+              <columns>
+                  <TableColumn fx:id="colunaDividendo" prefWidth="75.0" text="Dividendo" />
+                <TableColumn fx:id="colunaTipo" prefWidth="75.0" text="Tipo" />
+                <TableColumn fx:id="colunaValor" prefWidth="75.0" text="Valor" />
+                  <TableColumn fx:id="colunaDescricao" prefWidth="75.0" text="Descricao" />
+                  <TableColumn fx:id="colunaDataCriacao" prefWidth="75.0" text="Data da Criacao" />
+                  <TableColumn fx:id="colunaDataLiquidacao" prefWidth="75.0" text="Data da Liquidacao" />
+                  <TableColumn fx:id="colunaEstado" prefWidth="75.0" text="Estado" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Pane layoutX="240.0" prefHeight="66.0" prefWidth="319.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="66.0" prefWidth="319.0" text="Dividas do mês" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fx:id="addDivida" fitHeight="45.0" fitWidth="51.0" layoutX="724.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/ic_add_circle_black_48dp.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

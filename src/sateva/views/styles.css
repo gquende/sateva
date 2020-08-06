@@ -1,0 +1,126 @@
+.botao:hover{
+
+    -fx-background-color :#DB8303;
+-fx-text-fill: #FFFFFF;
+
+}
+
+.botao2{
+-fx-background-color:  #F79F1E;
+-fx-text-fill: #FFFFFF;
+}
+
+.botaoClose:hover{
+
+    -fx-background-color: #DC1900;
+
+
+}
+
+.botaoClose{
+
+ -fx-background-color: #7B0E00;
+}
+
+.itemTask{
+
+-fx-background-color: #201509;
+-fx-border-radius: 5;
+}
+.itemTask:hover{
+-fx-background-color: #392611;
+}
+
+.selectMenu:hover{
+-fx-background-color: #392611;
+
+}
+
+/*.selectMenu{
+
+-fx-background-color: #DC1900;
+-fx-border-color: #ffffff;
+-fx-border-width: 4;
+
+}
+*/
+
+
+.botaoMenu{
+
+-fx-background-color: #201509;
+
+}
+.botaoMenu:hover {
+
+-fx-background-color: #392611;
+
+}
+
+.botaoMenu:clicked{
+
+-fx-background-color: #392611;
+}
+
+
+
+.tab{
+
+
+}
+
+.tab:selected{
+
+-fx-background-color: #E36E1F;
+//-fx-focus-color: #E36E1F;
+
+//-fx-faint-focus-color: #E36E1F;
+//-fx-background-insets: 0 1 0 1,0,0;
+//-fx-border-style: solid;
+
+
+}
+
+
+.tab-pane .tab-header-area{
+-fx-background-color: #E36E1F;
+//-fx-focus-color: #E36E1F;
+
+}
+
+
+#table{
+
+-fx-background-color: #ffffff;
+//-fx-focus-color: #E36E1F;
+
+
+}
+
+
+#table:disable{
+
+-fx-background-color: #F79F1E;
+//-fx-focus-color: #E36E1F;
+
+}
+
+.leftMenu{
+
+
+-fx-background-color: #392611;
+
+}
+
+
+.botaoMenuLateral{
+
+-fx-background-color: transparent;
+
+}
+
+.botaoMenuVbox:hover{
+
+-fx-background-color: #AC6600;
+
+}

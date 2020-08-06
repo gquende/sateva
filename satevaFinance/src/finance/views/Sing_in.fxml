@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Avatar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="603.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finance.views.SingIn">
+   <children>
+      <VBox alignment="CENTER" layoutX="16.0" layoutY="12.0" prefHeight="574.0" prefWidth="446.0">
+         <children>
+            <Avatar opacity="0.91" radius="50.0" viewOrder="4.0">
+               <image>
+                  <Image url="@../img/001-monitor.png" />
+               </image>
+            </Avatar>
+         </children></VBox>
+   </children>
+</AnchorPane>
