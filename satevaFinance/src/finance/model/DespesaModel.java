@@ -1,8 +1,10 @@
-package finance.model;
+/* Classe Responsavel por tratar das Despesas com a base de Dados*/
 
+
+
+package finance.model;
 import finance.classes.Despesa;
 import finance.model.database.SQLiteDB;
-
 import javax.swing.*;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

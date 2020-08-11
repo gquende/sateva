@@ -16,7 +16,6 @@ public class SQLiteDB {
             return conection;
         }
         catch (SQLException erro){
-
             JOptionPane.showMessageDialog(null, "Erro\n");
             erro.printStackTrace();
         }

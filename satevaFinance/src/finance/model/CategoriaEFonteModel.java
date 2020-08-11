@@ -1,3 +1,10 @@
+/*
+* Classe responsavel por trabalhar as categorias da base de Dados
+*
+*
+* */
+
+
 package finance.model;
 
 import finance.classes.Categoria;
