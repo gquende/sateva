@@ -25,10 +25,9 @@ public class DespesaModel extends SQLiteDB {
             stm.setString(3,despesa.getDescricao());
             stm.setString(4,despesa.getData());
             stm.setDouble(5,despesa.getValor());
-            System.out.println(stm.execute());
+            stm.execute();
             return true;
         }catch (SQLException erro){
-
 
             JOptionPane.showMessageDialog(null, "Erro ao tentar inserir a Despesa\n"+erro.getMessage());
 

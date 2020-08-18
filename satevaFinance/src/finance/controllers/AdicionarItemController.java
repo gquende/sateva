@@ -53,14 +53,15 @@ public class AdicionarItemController {
 
 
         });
+
         btnDespesa.setOnMouseClicked(event -> {
 
             System.out.println("Inserir Despesa");
             AddDespesaController controller=new AddDespesaController();
-            addItemStage.close();
+            //addItemStage.close();
             addItemStage.setTitle("Adicionar Despesa");
             addItemStage.setScene(controller.showView());
-            addItemStage.show();
+            //addItemStage.show();
 
         });
         btnDivida.setOnMouseClicked(event -> {

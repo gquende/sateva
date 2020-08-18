@@ -7,11 +7,9 @@ import finance.model.ReceitaModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.geometry.Side;
 import javafx.scene.chart.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -19,10 +17,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 
-import javax.swing.*;
 import java.text.DateFormat;
 import java.text.Format;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -50,7 +46,7 @@ public class MainViewFinanceController {
     @FXML
     private Label labelPatrimonio;
     @FXML
-    private Label user;
+    private Label userLabel;
 
     @FXML
     private Button addItem;
@@ -95,12 +91,15 @@ public class MainViewFinanceController {
     private ArrayList<Divida> dividas;
     private  ArrayList<Divida> dividasNPagas;
 
+    //Variaveis que recebem o calculo das despesas totais do mes
     private double totalDespesaMesActual=0;
     private double totalDespesaMesAnterior=0;
     private double totalDividasMesActual=0;
     private double totalDividasMesAnterior=0;
     double totalReceitaMesActual=0;
     double totalReceitaMesAnterior=0;
+
+    //Tabelas hash para separar as despesas por categorias
     Hashtable<String, String> despesaSemanal= new Hashtable<String, String>();
    Hashtable<String, String> receitaSemanal= new Hashtable<String, String>();
 
@@ -112,8 +111,6 @@ public class MainViewFinanceController {
     public void initialize(){
 
 
-        System.out.println("ola eu sou");
-
         //Image newImg= new Image(getClass().getResourceAsStream("/finance/img/022-book.png"));//Carregar uma imagem!
         Image img= new Image("/finance/img/022-book.png");
       //  imgView.getStyleClass().add("imageview");
@@ -121,14 +118,11 @@ public class MainViewFinanceController {
   //      imgView.getStyleClass().add("imageview");
 //imgView.setStyle("-fx-background-radius: 40");
 
-perfilFoto.setStroke(Color.SEAGREEN );
+perfilFoto.setStroke(Color.WHITE);
 perfilFoto.setFill(new ImagePattern(img));
-//perfil.setEffect(new DropShadow(+25d, 0d,+2d, Color.DARKSEAGREEN));
-
 
         carregarDados();
-        user.setText(LoginController.getPessoa().getNome()+" "+LoginController.getPessoa().getSobrenome());//Mostra os dados do Utilizador
-
+        userLabel.setText(LoginController.getPessoa().getNome()+" "+LoginController.getPessoa().getSobrenome());//Mostra os dados do Utilizador
 
 
         paneDespesas.setOnMouseClicked(event -> {
@@ -143,7 +137,6 @@ perfilFoto.setFill(new ImagePattern(img));
             System.out.println("Clicou em Divida");
             DividasDoMesController controller= new DividasDoMesController();
             controller.showView();
-
 
         });
 
@@ -453,9 +446,10 @@ Date date= new Date();
         }
 
         public void add(){
+
             AdicionarItemController controller= new AdicionarItemController();
             controller.showView();
-            if(AdicionarItemController.adicionou==true)
+            if(AdicionarItemController.adicionou==true) //Caso tenha Verifica se foi realmente adicionando algum item
             {
                 carregarDados();
                 AdicionarItemController.adicionou=false;

@@ -75,7 +75,7 @@ public class AddReceitaController {
                   {
                       Receita receita= new Receita( LoginController.getPessoa().getUsername(),tipo, descricao, fonte, valor, data);
                       ReceitaModel receitaModel=new ReceitaModel();
-                      AdicionarItemController.adicionou=receitaModel.adicionarReceita(receita);
+                      AdicionarItemController.adicionou=receitaModel.adicionarReceita(receita); //Para enviar notificacao ao controlador
                       System.out.println(AdicionarItemController.adicionou);
                       JOptionPane.showMessageDialog(null,"Dados Inseridos com sucesso!");
                       tipoChoiceBox.setValue(null);

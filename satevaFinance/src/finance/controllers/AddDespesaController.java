@@ -71,7 +71,8 @@ public class AddDespesaController {
                       Despesa despesa= new Despesa( LoginController.getPessoa().getUsername(),tipo,descricao,data,valor);
                       DespesaModel despesaModel=new DespesaModel();
                       AdicionarItemController.adicionou=despesaModel.inserirDespesa(despesa);
-                      System.out.println(AdicionarItemController.adicionou);
+                      AdicionarItemController.adicionou=true;
+                   //   System.out.println(AdicionarItemController.adicionou);
                       JOptionPane.showMessageDialog(null,"Dados Inseridos com sucesso!");
                       choiceBoxTipo.setValue(null);
                       //fonteChoiceBox.setValue(null);

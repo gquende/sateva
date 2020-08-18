@@ -101,6 +101,7 @@ public class LoginController {
 
         });
 
+        //Metodo para seleccionar Imagem de perfil
         avatarSingin.setOnMouseClicked(event -> {
 
             FileChooser.ExtensionFilter extensao=new FileChooser.ExtensionFilter("Image Files","*.jpeg","*.jpg","*.png");

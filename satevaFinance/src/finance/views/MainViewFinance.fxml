@@ -142,7 +142,7 @@
                                                       <Font name="System Bold" size="24.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="labelPercentagemReceitas" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="0.0" prefWidth="238.0" text="0%" textAlignment="CENTER" textFill="#ff241c" textOverrun="CLIP" wrapText="true">
+                                                <Label fx:id="labelPercentagemReceitas" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="0.0" prefWidth="238.0" text="0%" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true">
                                                    <font>
                                                       <Font name="System Bold" size="11.0" />
                                                    </font>
@@ -188,7 +188,7 @@
                                                       <Font name="System Bold" size="24.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="labelPercentagemDespesas" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="0.0" prefWidth="238.0" text="0%" textAlignment="CENTER" textFill="#2dcf09" textOverrun="CLIP" wrapText="true">
+                                                <Label fx:id="labelPercentagemDespesas" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="0.0" prefWidth="238.0" text="0%" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true">
                                                    <font>
                                                       <Font name="System Bold" size="11.0" />
                                                    </font>
@@ -234,7 +234,7 @@
                                                       <Font name="System Bold" size="24.0" />
                                                    </font>
                                                 </Label>
-                                                <Label fx:id="labelPercentagemDividas" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="0.0" prefWidth="238.0" text="0%" textAlignment="CENTER" textFill="#2dcf09" textOverrun="CLIP" wrapText="true">
+                                                <Label fx:id="labelPercentagemDividas" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="0.0" prefWidth="238.0" text="0%" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true">
                                                    <font>
                                                       <Font name="System Bold" size="11.0" />
                                                    </font>
@@ -279,12 +279,12 @@
                            <children>
                               <VBox alignment="CENTER" layoutY="1.0" prefHeight="223.0" prefWidth="346.0">
                                  <children>
-                                    <Label fx:id="labelMetaPoupanca" alignment="CENTER" contentDisplay="CENTER" prefHeight="138.0" prefWidth="284.0" text="0,00/0,00" textAlignment="CENTER" textFill="#ff509a" wrapText="true">
+                                    <Label fx:id="labelMetaPoupanca" alignment="CENTER" contentDisplay="CENTER" prefHeight="138.0" prefWidth="284.0" text="0,00/0,00" textAlignment="CENTER" textFill="#52ffe2" wrapText="true">
                                        <font>
                                           <Font name="System Bold" size="39.0" />
                                        </font>
                                     </Label>
-                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="49.0" prefWidth="158.0" text="Meta Poupanca" textAlignment="CENTER" textFill="#ff529d" textOverrun="CLIP" wrapText="true">
+                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="49.0" prefWidth="158.0" text="Meta Poupanca" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true">
                                        <font>
                                           <Font size="19.0" />
                                        </font>
@@ -316,8 +316,8 @@
                            <children>
                               <VBox alignment="CENTER" prefHeight="133.0" prefWidth="250.0" spacing="10.0">
                                  <children>
-                                    <Circle fx:id="perfilFoto" fill="DODGERBLUE" radius="42.0" stroke="BLACK" strokeType="INSIDE" />
-                                    <Label fx:id="user" text="Adolfo Quende" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                                    <Circle fx:id="perfilFoto" fill="DODGERBLUE" radius="42.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" />
+                                    <Label fx:id="userLabel" text="Adolfo Quende" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -362,7 +362,6 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-            <Pane layoutX="109.0" layoutY="499.0" prefHeight="109.0" prefWidth="110.0" style="-fx-background-color: #FF509A; -fx-background-radius: 100000;" />
          </children>
       </AnchorPane>
    </right>
