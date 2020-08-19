@@ -73,7 +73,7 @@ public class AddDividaController {
 
         choiceBoxEstado.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue)->{
 
-            if (newValue.equals("Pago")){
+            if (newValue.equals("Pago") && newValue!=null){
 
                 textFieldDataLiquidacao.setVisible(true);
                 dataLiquidacao.setVisible(true);
@@ -162,8 +162,7 @@ public class AddDividaController {
                     Divida divida= new Divida(LoginController.getPessoa().getUsername(),tipo,descricao,data,valor,estado,dividendo,dataLiquid);
                     if (    dividaModel.inserirDivida(divida)==true){
 
-                        choiceBoxEstado.setValue(null);
-                        tipoChoiceBox.setValue(null);
+                       JOptionPane.showMessageDialog(null, "Divida Inserida com sucesso! ");
                         textAreaDescricao.setText("");
                         textFieldDividendo.setText("");
                         dataDivida.setValue(null);

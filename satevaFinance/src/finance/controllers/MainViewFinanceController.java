@@ -111,12 +111,8 @@ public class MainViewFinanceController {
     public void initialize(){
 
 
-        //Image newImg= new Image(getClass().getResourceAsStream("/finance/img/022-book.png"));//Carregar uma imagem!
+
         Image img= new Image("/finance/img/022-book.png");
-      //  imgView.getStyleClass().add("imageview");
-    //    imgView.setImage(img);
-  //      imgView.getStyleClass().add("imageview");
-//imgView.setStyle("-fx-background-radius: 40");
 
 perfilFoto.setStroke(Color.WHITE);
 perfilFoto.setFill(new ImagePattern(img));
@@ -155,7 +151,7 @@ perfilFoto.setFill(new ImagePattern(img));
 
         carregarReceitas();
         carregarDespesas();
-       carregarDividas();
+        carregarDividas();
         setarValoresDasDespesas();
         carregarGraficos();
     }
