@@ -157,13 +157,17 @@ perfilFoto.setFill(new ImagePattern(img));
     }
 
     private void carregarReceitas(){
+
+
         ReceitaModel receitaModel=new ReceitaModel();
-        receitas= receitaModel.listarReceitas(LoginController.getPessoa().getUsername());
+        receitas= receitaModel.listarReceitas(LoginController.getPessoa().getUsername()); //Busca a receitas no Banco de Dados
         Date date= new Date();
+
         Format dataFormat= new SimpleDateFormat("MM");//Formata a data para so receber o mes
 
         ReceitasDoMesController.receitas=new ArrayList<>();
         for(Receita receita: receitas){
+
             if(receita.getData().substring(5,7).equals(dataFormat.format(date.getTime())))//Compara os dados se e do mes actual
             {
                 totalReceitaMesActual+=receita.getValor();
@@ -176,19 +180,23 @@ perfilFoto.setFill(new ImagePattern(img));
                     totalReceitaMesAnterior+=receita.getValor();
             }
         }
-        labelReceitas.setText(totalReceitaMesActual+" Kzs");//Carrega o total na view
-        System.out.println(totalReceitaMesAnterior);
+        labelReceitas.setText(totalReceitaMesActual+" AOA");//Carrega o total na view
 
         float percentagem= Math.round((float) (((100*totalReceitaMesActual)/totalReceitaMesAnterior)-100.0));
-        if(percentagem>0)//Verifica a percentangem para determinar a cor que ser mostrado
+
+        if(percentagem>0.0)//Verifica a percentangem para determinar a cor que ser mostrado
         {
             labelPercentagemReceitas.setStyle("-fx-text-fill: #2dcf09");
             labelPercentagemReceitas.setText("+"+percentagem+"%");
         }
-        else{
+        else if(percentagem<0.0){
             labelPercentagemReceitas.setStyle("-fx-text-fill: #ff241c");
             labelPercentagemReceitas.setText(percentagem+"%");
 
+        }
+        else {
+            labelPercentagemReceitas.setStyle("-fx-text-fill: #ffffff");
+            labelPercentagemReceitas.setText("0%");
         }
     }
 
@@ -254,7 +262,7 @@ perfilFoto.setFill(new ImagePattern(img));
         else{
             if(totalDespesaMesAnterior==0)
             {
-                labelPercentagemDespesas.setStyle("-fx-text-fill: #ff241c");
+                labelPercentagemDespesas.setStyle("-fx-text-fill: #ffffff");
                 labelPercentagemDespesas.setText("-");
             }
             else
