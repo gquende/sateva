@@ -273,7 +273,7 @@ perfilFoto.setFill(new ImagePattern(img));
 
         }
 
-        if(percentagemDividas>0)//Verifica a percentangem para determinar a cor que ser mostrado
+        if(percentagemDividas>0)//Verifica a percentangem para determinar a cor que sera mostrado mostrado na view
         {
            if (totalDividasMesAnterior==0){
                labelPercentagemDividas.setStyle("-fx-text-fill: #ffffff");

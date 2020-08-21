@@ -37,7 +37,7 @@ public class AdicionarItemController {
 
     public static boolean adicionou=false;
 
-    public static Stage addItemStage;//Estagio Privado para controlar as cenas Deste controlodor;
+    public static Stage addItemStage;//Estagio Privado para controlar as cenas deste controlodor;
 
 
     public void initialize(){

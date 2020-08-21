@@ -189,7 +189,7 @@ public class AddDividaController {
 
             JOptionPane.showMessageDialog(null,"Erro: Valor invalido!");
         }
-        catch (NullPointerException erro){
+        catch (NullPointerException erro){ //Caso deixe algum valor nulo
 
             JOptionPane.showMessageDialog(null, "Erro em campos");
         }
