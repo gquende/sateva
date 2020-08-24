@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finance.controllers.LoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finance.controllers.LoginController">
    <center>
       <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <left>
@@ -36,7 +25,7 @@
          <right>
             <AnchorPane prefHeight="720.0" prefWidth="623.0" BorderPane.alignment="CENTER">
                <children>
-                  <Pane fx:id="paneLogin" layoutX="62.0" layoutY="84.0" prefHeight="576.0" prefWidth="424.0" style="-fx-border-radius: 5; -fx-background-color: #ffffff;" visible="false">
+                  <Pane fx:id="paneLogin" layoutX="62.0" layoutY="84.0" prefHeight="576.0" prefWidth="424.0" style="-fx-border-radius: 5; -fx-background-color: #ffffff;">
                      <children>
                         <ImageView fitHeight="83.0" fitWidth="219.0" layoutX="103.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -45,19 +34,19 @@
                         </ImageView>
                         <VBox alignment="CENTER" layoutX="45.0" layoutY="111.0" prefHeight="378.0" prefWidth="333.0">
                            <children>
-                              <TextField fx:id="fieldUsername" prefHeight="53.0" prefWidth="334.0" promptText="Username" style="-fx-background-color: #ffffff; -fx-background-radius: 8; -fx-border-color: #F79F1E;">
+                              <TextField fx:id="fieldUsername" prefHeight="53.0" prefWidth="334.0" promptText="Username" style="-fx-background-color: #ffffff; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #F79F1E;">
                                  <font>
-                                    <Font size="18.0" />
+                                    <Font size="14.0" />
                                  </font>
                               </TextField>
-                              <TextField fx:id="fieldPassword" layoutX="10.0" layoutY="10.0" prefHeight="53.0" prefWidth="334.0" promptText="Password" style="-fx-background-color: #ffffff; -fx-background-radius: 8; -fx-border-color: #F79F1E;">
+                              <PasswordField fx:id="fieldPassword" prefHeight="53.0" prefWidth="334.0" promptText="Password" style="-fx-background-color: #ffffff; -fx-border-color: #f7951E; -fx-background-radius: 8; -fx-border-radius: 8;">
                                  <VBox.margin>
-                                    <Insets top="40.0" />
+                                    <Insets top="50.0" />
                                  </VBox.margin>
                                  <font>
-                                    <Font size="18.0" />
+                                    <Font size="14.0" />
                                  </font>
-                              </TextField>
+                              </PasswordField>
                               <Button fx:id="btnLogin" mnemonicParsing="false" prefHeight="53.0" prefWidth="334.0" stylesheets="@styles.css" text="Login">
                                  <VBox.margin>
                                     <Insets top="40.0" />
@@ -104,9 +93,9 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Pane fx:id="paneSingIn" layoutX="62.0" layoutY="83.0" prefHeight="576.0" prefWidth="424.0" style="-fx-border-radius: 5; -fx-background-color: #ffffff;">
+                  <Pane fx:id="paneSingIn" layoutX="62.0" layoutY="83.0" prefHeight="576.0" prefWidth="424.0" style="-fx-border-radius: 5; -fx-background-color: #ffffff;" visible="false">
                      <children>
-                        <VBox alignment="CENTER" layoutX="45.0" layoutY="20.0" prefHeight="511.0" prefWidth="333.0" spacing="50.0">
+                        <VBox alignment="CENTER" layoutX="45.0" layoutY="20.0" prefHeight="511.0" prefWidth="333.0" spacing="50.0" visible="false">
                            <children>
                               <ImageView fx:id="avatarSingin" fitHeight="109.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-radius: 50; -fx-border-radius: 50;">
                                  <image>
