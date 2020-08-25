@@ -296,13 +296,7 @@ perfilFoto.setFill(new ImagePattern(img));
                 labelPercentagemDividas.setStyle("-fx-text-fill: #ff241c");
                 labelPercentagemDividas.setText("-"+percentagemDividas+"%");
             }
-
         }
-
-
-
-
-
     }
 
     private void carregarDividas(){
@@ -355,6 +349,9 @@ perfilFoto.setFill(new ImagePattern(img));
 
     private void carregarGraficos(){
 
+
+        //Grafico Circular Removido
+/*
             ObservableList<PieChart.Data> dados= FXCollections.observableArrayList();
             Enumeration<String> chaves=categorias.keys();
 
@@ -372,6 +369,10 @@ perfilFoto.setFill(new ImagePattern(img));
             graficoCircular.setPrefSize(350,300);
             graficoCircular.setTitle("Grafico das Despesas");
             graficoCircular.getStylesheets().add("/finance/views/style.css");
+
+*/
+
+
 
 
 //Grafico Linear
